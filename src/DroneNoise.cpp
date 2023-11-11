@@ -14,5 +14,5 @@ void DroneNoise::setVolume(short oscIndex, float volume) {
 }
 
 float DroneNoise::play(std::vector<double> frequency) {
-    return val * this->volume;
+    return noiseOsc.noise() * this->volume;
 }

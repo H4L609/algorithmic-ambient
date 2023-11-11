@@ -6,6 +6,7 @@
 #include "DroneSinewave.h"
 #include "PositionChaser.h"
 #include "RadialKnob.h"
+#include "AdsrSequencer.h"
 
 class ofApp : public ofBaseApp{
 
@@ -54,6 +55,8 @@ class ofApp : public ofBaseApp{
 
 		DroneSineWave drone1;
 		DroneSineWave drone2;
+
+		AdsrSequencer arSeq1;
 
 		double pitch;
 };

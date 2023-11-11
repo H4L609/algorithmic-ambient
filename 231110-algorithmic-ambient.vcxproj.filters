@@ -101,6 +101,8 @@
     <ClCompile Include="src\DroneSinewave.cpp" />
     <ClCompile Include="src\PositionChaser.cpp" />
     <ClCompile Include="src\RadialKnob.cpp" />
+    <ClCompile Include="src\DroneNoise.cpp" />
+    <ClCompile Include="src\ArWaveSequencer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -283,6 +285,8 @@
     <ClInclude Include="src\DroneSinewave.h" />
     <ClInclude Include="src\PositionChaser.h" />
     <ClInclude Include="src\RadialKnob.h" />
+    <ClInclude Include="src\DroneNoise.h" />
+    <ClInclude Include="src\ArWaveSequencer.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

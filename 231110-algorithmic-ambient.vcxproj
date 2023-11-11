@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -104,6 +104,8 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ArWaveSequencer.cpp" />
+    <ClCompile Include="src\DroneNoise.cpp" />
     <ClCompile Include="src\DroneSinewave.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -142,6 +144,8 @@
     <ClCompile Include="src\StepSequencer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ArWaveSequencer.h" />
+    <ClInclude Include="src\DroneNoise.h" />
     <ClInclude Include="src\DroneSinewave.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
