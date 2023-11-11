@@ -8,8 +8,8 @@ class DroneNoise
 {
 
 public:
-    DroneSineWave();
-    DroneSineWave(float volume);
+    DroneNoise();
+    DroneNoise(float volume);
     float play(std::vector<double> frequency);
 
     // Getter / Setter
@@ -20,12 +20,9 @@ public:
 
 private:
     // Oscilator Setup
-    static const short NUM_OSC = 4;
-    float masterVolume;
-    array<float, NUM_OSC> volume; // 0 ~ 1
-
-    array<maxiOsc, NUM_OSC> carrierOscs;
-    maxiOsc           modulationOsc;
+    static const short NUM_OSC = 1;
+    float volume;
+    maxiOsc noiseOsc;
 
 
 };
