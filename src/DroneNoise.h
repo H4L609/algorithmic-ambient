@@ -10,18 +10,18 @@ class DroneNoise
 public:
     DroneNoise();
     DroneNoise(float volume);
-    float play(std::vector<double> frequency);
+    float play();
 
-    // Getter / Setter
-    void setVolume(short oscIndex, float volume);
-    void setMasterVolume(float volume);
-    //enum class waveEnum { Square, SineWave, CosWave, Saw, Phasor, Triangle, Pulse, Impulse, Noise };
+    void setVolume(float volume);
 
+    void setSampleRate(int sr);
+    void setBufferSize(int bs);
 
 private:
-    // Oscilator Setup
-    static const short NUM_OSC = 1;
-    float volume;
+    int   sampleRate = 44100;
+    int   bufferSize = 256;
+
+    float volume=0.05;
     maxiOsc noiseOsc;
 
 

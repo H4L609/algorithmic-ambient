@@ -3,10 +3,13 @@
 #include "ofMain.h"
 #include "StepSequencer.h"
 #include "ofxMaxim.h"
-#include "DroneSinewave.h"
+#include "FMSineSynth.h"
 #include "PositionChaser.h"
 #include "RadialKnob.h"
-#include "AdsrSequencer.h"
+#include "ArWaveSequencer.h"
+#include "knobActiveChart.cpp"
+#include "DroneNoise.h."
+#include "simpleLPF.h"
 
 class ofApp : public ofBaseApp{
 
@@ -33,30 +36,67 @@ class ofApp : public ofBaseApp{
 		
 		ofSoundStream soundStream;
 
-		// Interaction
+		// Interaction Parameter & Objects
 		float percentX;
 		float percentY;
 
 		PositionChaser mouseChaser;
 		PositionChaser rotateChaser;
 
-		RadialKnob knob1;
-		RadialKnob knob2;
-		RadialKnob knob3;
-		RadialKnob knob4;
+		array<RadialKnob, 8> knobs;
+		array<glm::vec2, 8>  knobLayout;
+		int                  knobMargin;
+		int                  knobChannel;
+		int                  knobActivationPattern;
+		int					 knobActivationPatternVariation;
+
 
 		// Audio
 		//void audioIn(ofSoundBuffer& input) override; // not used in this example
 		void audioOut(ofSoundBuffer& output) override;
+		int sampleRate = 44100; /* Sampling Rate */
+		int bufferSize = 256;
 
 		StepSequencer stepSequencer;
-		maxiOsc oscillator1;
-		maxiOsc oscillator2;
 
-		DroneSineWave drone1;
-		DroneSineWave drone2;
+		maxiOsc     melody_01;
+		maxiOsc     melody_02;
 
-		AdsrSequencer arSeq1;
+		FMSineSynth fm_pad_01;
+		FMSineSynth fm_pad_02;
+
+		// Wave Noise
+		DroneNoise		hicutNoise_01;
+		SimpleLPF		hicutFilter_01;
+		ArWaveSequencer arseq1;
+
+		DroneNoise		hicutNoise_02;
+		SimpleLPF		hicutFilter_02;
+		ArWaveSequencer arseq2;
+
+		DroneNoise		hicutNoise_03;
+		SimpleLPF		hicutFilter_03;
+		ArWaveSequencer arseq3;
+
+		DroneNoise      hicutNoise_04;
+		SimpleLPF       hicutFilter_04;
+		ArWaveSequencer arseq4;
+
+		// Spark Noise
+		DroneNoise      sparkNoise_01;
+		SimpleLPF       sparkNoiseFilter_01;
+		ArWaveSequencer arseq5;
+
+		DroneNoise      sparkNoise_02;
+		SimpleLPF       sparkNoiseFilter_02;
+		ArWaveSequencer arseq6;
+
+		// Walking Noise
+		DroneNoise      walkNoise_01;
+		SimpleLPF       walkNoiseFilter_01;
+		ArWaveSequencer arseq7;
+
+		DroneNoise bandpassNoise;
 
 		double pitch;
 };

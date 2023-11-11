@@ -106,7 +106,8 @@
   <ItemGroup>
     <ClCompile Include="src\ArWaveSequencer.cpp" />
     <ClCompile Include="src\DroneNoise.cpp" />
-    <ClCompile Include="src\DroneSinewave.cpp" />
+    <ClCompile Include="src\FMSineSynth.cpp" />
+    <ClCompile Include="src\knobActiveChart.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp" />
@@ -141,12 +142,13 @@
     <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp" />
     <ClCompile Include="src\PositionChaser.cpp" />
     <ClCompile Include="src\RadialKnob.cpp" />
+    <ClCompile Include="src\SimpleLPF.cpp" />
     <ClCompile Include="src\StepSequencer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ArWaveSequencer.h" />
     <ClInclude Include="src\DroneNoise.h" />
-    <ClInclude Include="src\DroneSinewave.h" />
+    <ClInclude Include="src\FMSineSynth.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h" />
@@ -192,6 +194,7 @@
     <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h" />
     <ClInclude Include="src\PositionChaser.h" />
     <ClInclude Include="src\RadialKnob.h" />
+    <ClInclude Include="src\SimpleLPF.h" />
     <ClInclude Include="src\StepSequencer.h" />
   </ItemGroup>
   <ItemGroup>

@@ -98,11 +98,13 @@
       <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
     </ClCompile>
     <ClCompile Include="src\StepSequencer.cpp" />
-    <ClCompile Include="src\DroneSinewave.cpp" />
+    <ClCompile Include="src\FMSineSynth.cpp" />
     <ClCompile Include="src\PositionChaser.cpp" />
     <ClCompile Include="src\RadialKnob.cpp" />
     <ClCompile Include="src\DroneNoise.cpp" />
     <ClCompile Include="src\ArWaveSequencer.cpp" />
+    <ClCompile Include="src\knobActiveChart.cpp" />
+    <ClCompile Include="src\SimpleLPF.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -282,11 +284,12 @@
       <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
     </ClInclude>
     <ClInclude Include="src\StepSequencer.h" />
-    <ClInclude Include="src\DroneSinewave.h" />
+    <ClInclude Include="src\FMSineSynth.h" />
     <ClInclude Include="src\PositionChaser.h" />
     <ClInclude Include="src\RadialKnob.h" />
     <ClInclude Include="src\DroneNoise.h" />
     <ClInclude Include="src\ArWaveSequencer.h" />
+    <ClInclude Include="src\SimpleLPF.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
