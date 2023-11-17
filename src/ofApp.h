@@ -43,8 +43,8 @@ class ofApp : public ofBaseApp{
 		PositionChaser mouseChaser;
 		PositionChaser rotateChaser;
 
-		array<RadialKnob, 8> knobs;
-		array<glm::vec2, 8>  knobLayout;
+		array<RadialKnob, 4> knobs;
+		array<glm::vec2, 4>  knobLayout;
 		int                  knobMargin;
 		int                  knobChannel;
 		int                  knobActivationPattern;
@@ -58,6 +58,11 @@ class ofApp : public ofBaseApp{
 		int bufferSize = 256;
 
 		StepSequencer stepSequencer;
+
+		// mix
+		float volume_whiteNoise;
+		float volume_sparkNoise;
+		float volume_co2Noise;
 
 		maxiOsc     melody_01;
 		maxiOsc     melody_02;
@@ -99,4 +104,6 @@ class ofApp : public ofBaseApp{
 		DroneNoise bandpassNoise;
 
 		double pitch;
+
+		ofTrueTypeFont font;
 };
